@@ -4,7 +4,7 @@ const app = express()
 const port = process.env.PORT||3000
 const path = require('path')
 const url=require('url')
-const host=process.env.APP_BASE_URL
+const APP_BASE_URL=process.env.APP_BASE_URL
 var bodyParser = require('body-parser');
 const info = require('./Other/info');
 const { urlencoded } = require('body-parser');
@@ -72,5 +72,5 @@ app.post('/submit' ,urlencodedParser,(req,res)=>{
 
 
 app.listen(port, () => {
-  console.log(`Example app listening at ${host}`)
+  console.log(`Example app listening at ${APP_BASE_URL}:${port}`)
 })
