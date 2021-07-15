@@ -1,0 +1,305 @@
+
+
+    /* navbar */
+    :root {
+      --c1: #FEF7DC;
+      --c2: #E6DDC6;
+      --c3: #C2B8A3;
+      --c4: #A19882;
+    }
+
+    .navbar {
+      background-color: var(--c4);
+      display: flex;
+      align-items: center;
+      height: 64px;
+      position: fixed;
+      top: 0;
+      z-index: 12;
+      width: 100%;
+      justify-content: space-between;
+      flex-direction: row;
+    }
+
+    .link-container {
+      height: 100%;
+    }
+
+    .link-container {
+      display: flex;
+      flex-direction: row;
+      width: 40%;
+      margin-right: 20px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .link-container>a {
+      width: 100%;
+      height: 50%;
+      text-align: center;
+      font-size: 24px;
+      color: var(--c2);
+      transition: all 0.3s ease;
+    }
+
+    .link-container>a:hover {
+      font-weight: bold;
+      transform: scale(1.1);
+    }
+
+    #logo {
+      width: 10%;
+      height: 100%;
+      padding-left: 20px;
+      display: flex;
+      align-items: center;
+    }
+
+    #logo>a {
+      color: var(--c2);
+      font-size: 1.8rem;
+      font-weight: 800;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      transition: all .2s linear;
+    }
+
+    #logo>a:hover {
+      text-shadow: 3px 2px 3px rgba(0, 0, 0, 0.473);
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    #ham {
+      display: none;
+    }
+
+    .res-link-container {
+      display: none;
+    }
+
+    /* navbar end */
+
+main{
+  display: grid;
+  height: 90vh;
+  margin-top: 10vh;
+  width: 100%;
+  grid-template-columns: repeat(2,1fr);
+}
+
+/* slider csss */
+
+* {
+  box-sizing: border-box;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+/* styling table */
+#carinfo{
+  width: 100%;
+  height: 100%;
+}
+#carinfo>a{
+  width: 100px;
+    height: 40px;
+    /* justify-self: center; */
+    color: var(--c4);
+    background-color: var(--c1);
+    text-decoration: none;
+    display: grid;
+    place-self: enter;
+    border-radius: 8px;
+    box-shadow: -3px -4px 15px 0px #fef7dc, inset -5px -1px 15px 0px rgb(136 136 136);
+    place-content: center;
+    margin: auto;
+margin-top: 50px;
+}
+#customers {
+  border-collapse: collapse;
+  width: 99%;
+  margin: 1%;
+}
+
+#customers td, #customers th {
+  border: 1px solid rgb(255, 255, 255);
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: var(--c2);}
+
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: var(--c2);
+  color: var(--c4);
+}
+
+
+
+
+    @media only screen and (max-width: 780px) {
+
+      #ham{
+  display: grid;
+  place-content: center;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  border: none;
+  background-color: var(--c1);
+  color: var(--c4);
+  border-radius: 9px;
+  outline: none;
+  margin-right:40px;
+}
+.link-container{
+  display: none;
+}
+.res-link-container{
+  display: none;
+  grid-template-rows: repeat(4,1fr);
+  height: 90vh;
+  width: 100%;
+  background-color: var(--c3);
+  position: fixed;
+  transition: all 0.3s linear;
+  z-index: 14;
+}
+.close{
+  animation:close 600ms linear ;
+}
+.open{
+  animation:open 800ms linear ;
+}
+@keyframes open {
+  from{
+    height: 0;
+  }
+  to{
+    height: 90vh;
+  }
+}
+@keyframes close {
+  from{
+    height: 90vh;
+  }
+  to{
+    height: 0;
+  }
+
+}
+.res-link-container>a{
+  color: var(--c2);
+  height :100%;
+  width: 100%;
+  display: grid;
+  place-content: center;
+  background-color: var(--c4);
+  font-size: 24px;
+  letter-spacing: 4px;
+  transition: all 0.3s linear;
+  }
+  .res-link-container>a:hover{
+    background-color: var(--c3);
+    color: black;
+  }
+
+  main{
+  display: flex;
+  height: 90vh;
+  margin-top: 10vh;
+  width: 100%;
+ flex-direction: column;
+}
+
+
+
+    }

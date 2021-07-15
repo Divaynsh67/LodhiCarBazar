@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car-{{carname}}</title>
+  <link rel="stylesheet" href="/css/global.css">
+<link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+</head>
+
+<body>
+  <div class="navbar">
+    <div id="logo">
+      <a href="/#home">LodhiCarBazar</a>
+    </div>
+  
+    <div class="link-container">
+        <a href="/#home">Home</a>
+        <a href="/#CarShowCase">Cars</a>
+        <a href="/#contactSection">Contact</a>
+        <a href="/#about">About</a>
+    </div>
+    <button id="ham"class="material-icons">menu</button>
+  </div>
+  <div class="res-link-container ">
+    <a href="/#home">Home</a>
+    <a href="/#CarShowCase">Cars</a>
+    <a href="/#contactSection">Contact</a>
+    <a href="/#about">About</a>
+  </div>
+  
+  <!-- navbar end -->
+
+  <!-- navbar end -->
+
+  <!-- slider  -->
+
+<main>
+<!-- Container for the image gallery -->
+<div class="container">
+
+  <!-- Full-width images with number text -->
+  <div class="mySlides">
+    <div class="numbertext">1 / 5</div>
+   <img src="{{carimg1}}"  style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 5</div>
+      <img src="{{carimg2}}" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 5</div>
+      <img src="{{carimg3}}" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">4 / 5</div>
+      <img src="{{carimg4}}" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 5</div>
+      <img src="{{carimg5}}" style="width:100%">
+  </div>
+
+ 
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+  <!-- Image text -->
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <!-- Thumbnail images -->
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="{{carimg1}}" style="width:100%" onclick="currentSlide(1)">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="{{carimg2}}" style="width:100%" onclick="currentSlide(2)" >
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="{{carimg3}}" style="width:100%" onclick="currentSlide(3)" >
+    </div>
+    <div class="column">
+      <img class="demo cursor"src="{{carimg4}}" style="width:100%" onclick="currentSlide(4)" >
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="{{carimg5}}" style="width:100%" onclick="currentSlide(5)" >
+    </div>
+  </div>
+</div>
+
+
+<section id="carinfo">
+  <h1 style="text-align:center; font-size: 24px;">{{carname}}</h1>
+  <table id="customers">
+    <tr>
+      <th>Model</th>
+      <th>Version</th>
+      <th>Price</th>
+      <th>Car</th>
+    </tr>
+    <tr> 
+      <td>{{model}}</td>
+      <td>{{seter}}</td>
+      <td>{{price}}</td>
+      <td>{{carname}}</td>
+    </tr>
+  </table>
+
+
+
+ </table>
+ <a href="/#contactSection">Contact</a>
+</section>
+
+</main>
+
+
+
+</body>
+<script>
+  let menuBtn = document.getElementById('ham')
+  let menulist = document.querySelector('.res-link-container')
+  menuBtn.innerHTML = 'menu'
+  function Changer() {
+    if (menuBtn.innerHTML == 'menu') {
+      menuBtn.innerHTML = 'close'
+    } else {
+      menuBtn.innerHTML = 'menu'
+    }
+    displayToggle()
+  }
+
+  function displayToggle() {
+    if (menulist.style.display == 'grid') {
+      menulist.classList.remove('open')
+      menulist.classList.add('close')
+      setTimeout(() => {
+        menulist.style.display = 'none'
+      }, 550);
+    }
+    else {
+      menulist.classList.remove('close')
+      menulist.classList.add('open')
+      menulist.style.display = 'grid'
+    }
+  }
+
+
+  menuBtn.addEventListener('click', () => {
+    Changer()
+  })
+
+//slider scripting
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+
+</script>
+
+</html>
