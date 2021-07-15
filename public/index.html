@@ -1,143 +1,150 @@
 <!DOCTYPE html>
 <html lang="en" id="home">
-<head>
- <meta charset="UTF-8">
- <meta http-equiv="X-UA-Compatible" content="IE=edge">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>LodhiCarBazar</title>
- <link rel="stylesheet" href="./css/index.css">
- <link rel="stylesheet" href="./css/global.css">
- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-</head>
-<body>
- <!-- navbar -->
- <div class="navbar">
-  <div id="logo">
-    <a href="#home">LodhiCarBazar</a>
-  </div>
 
-  <div class="link-container">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LodhiCarBazar</title>
+  <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="./css/global.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+  <!-- navbar -->
+  <div class="navbar">
+    <div id="logo">
+      <a href="#home">LodhiCarBazar</a>
+    </div>
+
+    <div class="link-container">
       <a href="#home">Home</a>
       <a href="#CarShowCase">Cars</a>
       <a href="#contactSection">Contact</a>
       <a href="#about">About</a>
+    </div>
+    <button id="ham" class="material-icons">menu</button>
   </div>
-  <button id="ham"class="material-icons">menu</button>
-</div>
-<div class="res-link-container ">
-  <a href="#home">Home</a>
-  <a href="#CarShowCase">Cars</a>
-  <a href="#contactSection">Contact</a>
-  <a href="#about">About</a>
-</div>
+  <div class="res-link-container ">
+    <a href="#home">Home</a>
+    <a href="#CarShowCase">Cars</a>
+    <a href="#contactSection">Contact</a>
+    <a href="#about">About</a>
+  </div>
 
-<!-- navbar end -->
+  <!-- navbar end -->
 
-<!-- slider  -->
-<!-- Slideshow container -->
-<div class="slideshow-container">
+  <!-- slider  -->
+  <!-- Slideshow container -->
+  <div class="slideshow-container">
 
- <!-- Full-width images with number and caption text -->
- <div class="mySlides fade">
-   <div class="numbertext">1 / 4</div>
-   <img src="./img/img1.jpeg" style="width:100%">
-   <div class="text">Good Service in Low Cost</div>
- </div>
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 4</div>
+      <img src="./img/img1.jpeg" style="width:100%">
+      <div class="text">Good Service in Low Cost</div>
+    </div>
 
- <div class="mySlides fade">
-   <div class="numbertext">2 / 4</div>
-   <img src="./img/img2.jpeg" style="width:100%">
-   <div class="text">Owner Of LodhiCarBazar</div>
- </div>
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 4</div>
+      <img src="./img/img2.jpeg" style="width:100%">
+      <div class="text">Owner Of LodhiCarBazar</div>
+    </div>
 
- <div class="mySlides fade">
-   <div class="numbertext">3 / 4</div>
-   <img src="./img/img3.jpeg" style="width:100%">
-   <div class="text">Second Hand Cars</div>
- </div>
- 
- <div class="mySlides fade">
-   <div class="numbertext">4 / 4</div>
-   <img src="./img/img5.jpeg" style="width:100%">
-   <div class="text">Car that Everyone Can Effort</div>
- </div>
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 4</div>
+      <img src="./img/img3.jpeg" style="width:100%">
+      <div class="text">Second Hand Cars</div>
+    </div>
 
- <!-- Next and previous buttons -->
- <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
- <a class="next" onclick="plusSlides(1)">&#10095;</a>
-</div>
-<br>
+    <div class="mySlides fade">
+      <div class="numbertext">4 / 4</div>
+      <img src="./img/img5.jpeg" style="width:100%">
+      <div class="text">Car that Everyone Can Effort</div>
+    </div>
 
-<!-- The dots/circles -->
-<div style="text-align:center">
- <span class="dot" onclick="currentSlide(1)"></span>
- <span class="dot" onclick="currentSlide(2)"></span>
- <span class="dot" onclick="currentSlide(3)"></span>
- <span class="dot" onclick="currentSlide(4)"></span>
-</div>
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
 
-<!-- slider end -->
+  <!-- The dots/circles -->
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+  </div>
 
-<!--products-->
-<h2 style="text-align: center; font-size:24px ;">Avaiable Cars</h2>
-<main id="CarShowCase" class="products-grid">
+  <!-- slider end -->
 
-<a href="/cars/bolero" class="product">
-<img class="product-img" src="./img/bolero-side.jpg">
-<div class="details">
-<span class="name">Bolero</span><p>Model-2010</p>
-</div>
-</a>
+  <!--products-->
+  <h2 style="text-align: center; font-size:24px ;">Avaiable Cars</h2>
+  <main id="CarShowCase" class="products-grid">
 
-<a href="/cars/alto" class="product">
-<img class="product-img" src="img/alto-front.jpg">
-<div class="details">
-<span class="name"> Maruti Alto</span><p>Model-2008</p>
-</div>
-</a>
+    <a href="/cars/bolero" class="product">
+      <img class="product-img" src="./img/bolero-side.jpg">
+      <div class="details">
+        <span class="name">Bolero</span>
+        <p>Model-2010</p>
+      </div>
+    </a>
 
-<a href="/cars/omni" class="product">
-<img class="product-img" src="img/omni-front.jpg">
-<div class="details">
-<span class="name">Omni</span><p>Model-2001</p>
-</div>
-</a>
+    <a href="/cars/alto" class="product">
+      <img class="product-img" src="img/alto-front.jpg">
+      <div class="details">
+        <span class="name"> Maruti Alto</span>
+        <p>Model-2008</p>
+      </div>
+    </a>
 
-
-
-</main>
-
-<h2 style="text-align: center; font-size:24px ;"id="contactSection">Contact</h2>
-
-<form action="/submit" method="POST" id="contact">
-  <input type="text"  name="name"placeholder="Enter Your Name" required>
-  <input type="email"  name="email"placeholder="Enter Your Email" required>
-  <input type="tel" pattern="[789][0-9]{9}"  name="phoneNo" placeholder="Enter Your Phone Number"required>
-  <input type="text" name="Message" placeholder="Type A Message" minlength="20" maxlength="120"  required>
-
-  <button type="submit">Send</button>
-<p>My Phone No. For Drecit Contact <a href="tel:+919575973718">+91 9575973718</a> or <a href="tel:+919340338010 ">+91 9340338010 </a></p>
-<a  href="tel:+919575973718" class="material-icons call">call</a>
-</form>
+    <a href="/cars/omni" class="product">
+      <img class="product-img" src="img/omni-front.jpg">
+      <div class="details">
+        <span class="name">Omni</span>
+        <p>Model-2001</p>
+      </div>
+    </a>
 
 
-<h2 style="text-align: center; font-size:24px ;">About</h2>
+
+  </main>
+
+  <h2 style="text-align: center; font-size:24px ;" id="contactSection">Contact</h2>
+
+  <form action="/submit" method="POST" id="contact">
+    <input type="text" name="name" placeholder="Enter Your Name" required>
+    <input type="email" name="email" placeholder="Enter Your Email" required>
+    <input type="tel" pattern="[789][0-9]{9}" name="phoneNo" placeholder="Enter Your Phone Number" required>
+    <input type="text" name="Message" placeholder="Type A Message" minlength="20" maxlength="120" required>
+
+    <button type="submit">Send</button>
+    <p>My Phone No. For Drecit Contact <a href="tel:+919575973718">+91 9575973718</a> or <a
+        href="tel:+919340338010 ">+91 9340338010 </a></p>
+    <a href="tel:+919575973718" class="material-icons call">call</a>
+  </form>
 
 
-<section id="about">
-  <img src="img/owner-3.jpg">
-<div id="profile">
-<p>My name is Ram Nivas Lodhi and I am the owner of lodhi car bazar we sell second cars in shower room.</p>
-
-<p>Showeroom Address- <i>Guna road, Ashok Nagar, Mp</i></p>
+  <h2 style="text-align: center; font-size:24px ;">About</h2>
 
 
-<p>My Phone No. For Drecit Contact <a href="tel:+919575973718">+91 9575973718</a> or <a href="tel:+919340338010 ">+91 9340338010 </a></p>
+  <section id="about">
+    <img src="img/owner-3.jpg">
+    <div id="profile">
+      <p>My name is Ram Nivas Lodhi and I am the owner of lodhi car bazar we sell second cars in shower room.</p>
 
-</div>
+      <p>Showeroom Address- <i>Guna road, Ashok Nagar, Mp</i></p>
 
 
-</section>
+      <p>My Phone No. For Direct Contact <a href="tel:+919575973718">+91 9575973718</a> or <a
+          href="tel:+919340338010 ">+91 9340338010 </a></p>
+
+    </div>
+
+
+  </section>
 
 
 
@@ -145,73 +152,74 @@
 
 
 </body>
-<script >
+<script>
 
-var slideIndex = 1;
-showSlides(slideIndex);
+  var slideIndex = 1;
+  showSlides(slideIndex);
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";  
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
   }
-  for (i = 0; i < dots.length; i++) {
+
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = slides.length }
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
       dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
   }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-}
 
 
-// navbar script
-let menuBtn=document.getElementById('ham')
-  let menulist=document.querySelector('.res-link-container')
- menuBtn.innerHTML='menu'
-function Changer() {
-  if (menuBtn.innerHTML=='menu') {
-    menuBtn.innerHTML='close'
-  } else {
-    menuBtn.innerHTML='menu'
+  // navbar script
+  let menuBtn = document.getElementById('ham')
+  let menulist = document.querySelector('.res-link-container')
+  menuBtn.innerHTML = 'menu'
+  function Changer() {
+    if (menuBtn.innerHTML == 'menu') {
+      menuBtn.innerHTML = 'close'
+    } else {
+      menuBtn.innerHTML = 'menu'
+    }
+    displayToggle()
   }
-  displayToggle()
-}
 
-function displayToggle() {
-  if (menulist.style.display=='grid') {
-    menulist.classList.remove('open')
-    menulist.classList.add('close')
-    setTimeout(() => {
-      menulist.style.display='none'
-    }, 600);
+  function displayToggle() {
+    if (menulist.style.display == 'grid') {
+      menulist.classList.remove('open')
+      menulist.classList.add('close')
+      setTimeout(() => {
+        menulist.style.display = 'none'
+      }, 600);
+    }
+    else {
+      menulist.classList.remove('close')
+      menulist.classList.add('open')
+      menulist.style.display = 'grid'
+    }
   }
-  else{
-    menulist.classList.remove('close')
-    menulist.classList.add('open')
-    menulist.style.display='grid'
-  }
-}
 
 
-  menuBtn.addEventListener('click',()=>{
-Changer()
+  menuBtn.addEventListener('click', () => {
+    Changer()
   })
 
 
   //form vadition
-  let phoneNo=document.querySelector('input[name="phoneNo"]')
-  let Message=document.querySelector('input[name="Message"]')
-  
+  let phoneNo = document.querySelector('input[name="phoneNo"]')
+  let Message = document.querySelector('input[name="Message"]')
+
 </script>
+
 </html>
